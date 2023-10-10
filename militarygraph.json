@@ -1,8 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 650,
-    "height": 500,
-    "title": "Military Power Based on Active Personnel",
+    "width": 700,
+    "height": 400,
     "data": {
       "url": "https://raw.githubusercontent.com/jyus0003/JasonYusufDataVis2/main/global%20firepower%202022%20wide.csv"
     },
@@ -12,7 +11,7 @@
         "bind": {
           "input": "select",
           "options": [
-            null,
+            "null",
             "North America",
             "South America",
             "Europe",
@@ -40,18 +39,15 @@
     ],
     "encoding": {
       "x": {
-        "field": "TP",
-        "type": "quantitative",
-        "title": "Total Population",
-        "axis": {"tickCount": 9},
-        "scale": {"type": "log", "domain": [100000, 100000000000]}
+        "field": "Country",
+        "type": "nominal",
+        "title": "Country"
       },
       "y": {
         "field": "AM",
         "type": "quantitative",
         "title": "Available Manpower",
-        "axis": {"tickCount": 7},
-        "scale": {"type": "log", "domain": [100000, 1000000000]}
+        "scale": {"type": "log", "domain": [100000, 10000000000]}
       }
     },
     "layer": [
@@ -64,10 +60,9 @@
             "title": "Active Personel",
             "scale": {
               "type": "threshold",
-              "domain": [0, 500000, 1000000, 150000, 2000000],
-              "range": [0, 250, 500, 750, 1000]
-            },
-            "legend": {"format": ".1s"}
+              "domain": [0, 250000, 500000, 1000000, 1500000, 2000000],
+              "range": [0, 2500, 5000, 7500, 10000, 12500]
+            }
           },
           "color": {
             "field": "Continent",
