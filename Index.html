@@ -3,30 +3,29 @@
 
 <head>
     <title>Military Data</title>
-    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-    <!-- Import pure.css -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
 
 </head>
 
-<body>
+<body style="background-color: lightcyan; text-align: center">
 
     <div class="page">
 
         <h2>Military Power Map of Different Countries Worldwide (2022)</h2>
-        
+        <p style="text-align: left">Below is an interactive map that allows you to zoom in to specific continents, so that you can clearly view
+            the military power of each country. Please note the darker the color, the more powerful is the military of that country.
+        </p>
         <div class="pure-g">
             <div class="pure-u-1-1">
                 <div id="vis1" class="vis-container"></div>
@@ -37,17 +36,16 @@
 
             <hr class="hr3">
 
-            <h2>Military Power Based on Active Personnel</h2>
-            <!-- pure grid group -->
+            <h2>Military Power Based on Active Personnel (2022)</h2>
+            <p style="text-align: left">Below is an interactive graph that allows you to filter data based on specific continents, so that you can clearly view
+                the military power and the defense budget of each country. 
+            </p>
             <div class="pure-g">
                 <div class="pure-u-1-1">
                     <div id="vis2" class="vis-container"></div>
+                    <div id="vis3" class="vis-container"></div>
                 </div>
             </div>
-            <br>
-
-
-    </div>
     </div>
 
 
@@ -58,8 +56,10 @@
         var specVis2 = "militarygraph.json";
         vegaEmbed('#vis2', specVis2);
 
+        var specVis3 = "budgetgraph.json";
+        vegaEmbed('#vis3', specVis3);
+
         print(brush)
     </script>
 </body>
-
 </html>
