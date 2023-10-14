@@ -1,0 +1,12 @@
+Continent,Active Personnel,Available Manpower,Defense Budget,Total Population,Armored Vehicles,Helicopters,Reserved Personnel,Tanks,Aircraft,Rocket Projector,Self-Propelled Artillery,Patrol Vessels,Submarines,Navy Ships,Fighters/Interceptors,Towed Artillery
+Asia,11042500,2247838644,6.16E+11,4549664876,175612,8139,6831500,46824,19946,14237,14874,1911,243,4741,19946,27851
+North America,1890500,254961234,8.06E+11,568248501,52474,6790,701000,8148,14421,1549,1598,274,73,881,14421,2741
+South America,1178300,210644305,43023488000,429381965,8889,856,1715000,1879,2410,321,376,544,34,1127,2410,1681
+Europe,2847200,360797477,4.70E+11,763885799,112144,5546,2569000,22688,11832,6220,11505,532,139,2633,11832,15095
+Oceania,68600,12986509,48318000000,30801415,2265,177,22500,59,477,0,0,16,6,52,477,78
+Africa,2259000,520587331,43380033681,1261500460,36195,1799,1030000,13206,3916,2910,2708,482,17,1086,3916,5956
+,,,,,,,,,,,,,,,,
+,,Land,Sea,Air,Artillery,,,,,,,,,,,
+,,Armored Vehicles,Patrol Vessels,Helicopters,Rocket Projector,,,,,,,,,,,
+,,Tanks,Submarines,Aircraft,Self-Propelled Artillery,,,,,,,,,,,
+,,,Navy Ships,Fighters/Inceptors,Towed Artillery,,,,,,,,,,,
