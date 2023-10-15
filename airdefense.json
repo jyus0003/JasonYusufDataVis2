@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#e1feff",
+  "title": "Air Defense Data",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jyus0003/JasonYusufDataVis2/main/global%20firepower%202022%20wide%20(Continent).csv"
+  },
+  "width": 300,
+  "height": 600,
+  "repeat": {
+    "layer": ["Aircraft", "Helicopters"]
+  },
+  "spec": {
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Continent",
+        "type": "nominal"
+      },
+      "y": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": "Amount"
+      },
+      "color": {
+        "datum": {"repeat": "layer"}
+      }
+    }
+  }
+  }

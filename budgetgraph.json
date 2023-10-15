@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#e1feff",
+  "title": "Military Budget Worldwide (2022)",
+  "width": 1800,
+  "height": 400,
+  "mark": "bar",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jyus0003/JasonYusufDataVis2/main/global%20firepower%202022%20wide.csv"
+  },
+  "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    },
+    {
+      "calculate": "datum.DB/datum.TP",
+      "as": "Defense Budget per head"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "title": "Country"
+    },
+    "y": {
+      "field": "Defense Budget per head",
+      "type": "quantitative",
+      "title": "Defense Budget per head",
+      "axis": {"tickCount": 7},
+      "scale": {"type": "linear"}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Defense Budget per head", "type": "quantitative", "format": ".2f"},
+      {"field": "DB", "type": "quantitative", "format": ",", "title": "Defense Budget (USD)"}
+    ]
+  }
+}

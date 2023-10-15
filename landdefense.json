@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#e1feff",
+  "title": "Land Defense Data",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jyus0003/JasonYusufDataVis2/main/global%20firepower%202022%20wide%20(Continent).csv"
+    },
+  "vconcat": [
+    {
+    "title": "Tanks",
+    "mark": {"type": "arc", "innerRadius": 55, "tooltip": true},
+    "encoding": {
+      "theta": {"field": "Tanks", "type": "quantitative"},
+      "color": {"field": "Continent", "type": "nominal"}
+   }
+  },
+  {
+    "title": "Armored Vehicles",
+    "mark": {"type": "arc", "innerRadius": 55, "tooltip": true},
+    "encoding": {
+      "theta": {"field": "Armored Vehicles", "type": "quantitative"},
+      "color": {"field": "Continent", "type": "nominal"}
+  }
+  }
+  ]
+}

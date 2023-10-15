@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "#e1feff",
+  "title": "Sea Defense Data",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jyus0003/JasonYusufDataVis2/main/global%20firepower%202022%20wide%20(Continent).csv"
+  },
+  "width": 400,
+  "height": 600,
+  "repeat": {
+    "layer": ["Submarines", "Patrol Vessels", "Navy Ships"]
+  },
+  "spec": {
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "Continent",
+        "type": "nominal"
+      },
+      "y": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": "Amount"
+      },
+      "color": {
+        "datum": {"repeat": "layer"}
+      },
+      "tooltip": [
+        {"field": "Continent", "type": "nominal"},
+        {"field": {"repeat": "layer"}, "type": "quantitative"}
+      ]
+    }
+  }
+}

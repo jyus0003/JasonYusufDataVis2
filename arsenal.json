@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "#e1feff",
+    "title": "Artillery Owned in Each Continent",
+    "width": 1000,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jyus0003/JasonYusufDataVis2/main/global%20firepower%202022%20wide%20(Continent).csv"
+    },
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "Continent",
+        "type": "nominal"
+        },
+      "y": {
+        "field": "Artillery",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "Continent", "type": "nominal"},
+          {"field": "Artillery", "type": "quantitative"}
+        ]
+      }
+}

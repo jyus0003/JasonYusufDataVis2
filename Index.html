@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Worldwide Military Information</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+</head>
+
+<body style="text-align: center; background-color: #e1feff;">
+
+    <div class="page">
+
+        <h1>Worldwide Military Data in 2022</h1>
+        <table border="2", cellpadding="10%">
+            <tr>
+                <td><img src="ChinaMilitary.jpg.webp", width="400px", height="300px"></td>
+                <td><p style="font-size: x-large;">The military strength of a country is one of the most integral components of a country, as without it the country would be vulnerable to attacks from other countries. There are 3 components of a country that needs to be guarded, which are land, sea, and air. These 3 components must work hand-in-hand to protect the country from any unwanted attacks. Countries vary in military power, and they are based on 2 different parameters, which are military budget/spending and the manpower available within the military. This visualisation will attempt to compare the different military strength of countries worldwide.</p>
+                </td>
+                <td><img src="North-Korea-soldiers.jpg", width="400px", height="300px"></td>
+            </tr>
+            
+        </table>
+
+        <div class="pure-g">
+            <div class="pure-u-1-1", style="border: solid;">
+                <h3>The map below shows the number of active military personnel around the globe. The more people are present, the more powerful the military.</h3>
+                <div id="vis1" class="vis-container"></div>
+            </div>
+        </div>
+
+        <br>
+        
+            <table style="border: solid;">
+            <tr>
+                <td>
+                <div class="pure-g">
+                    <div class="pure-u-1-1">
+                        <div id="vis2" class="vis-container"></div>
+                    </div>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <p style="border-style: groove; margin-right: 100px; margin-left: 100px; font-size: x-large;">The graph above shows the different amount of money that countries spend on their military. The special government funds reserved for military purposes is known as the defense budget. The defense of the budget in each country varies based on the ability of the government to manage its funds as well as the amount of funds that are available to the government. However, a country must not spend too much money on their military, as there are other aspects that would need to be focused on such as infrastructure, education, healthcare, etc.</p>
+                </td>
+            </tr>
+            </table>
+
+            <br>
+
+            <table border="1", cellpadding="10%", align="center">
+                <tr>
+                    <td>
+                        <div class="pure-g">
+                            <div class="pure-u-1-1">
+                                <div id="vis3" class="vis-container"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="pure-g">
+                            <div class="pure-u-1-1">
+                                <div id="vis4" class="vis-container"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="pure-g">
+                            <div class="pure-u-1-1">
+                                <div id="vis5" class="vis-container"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <p style="border-style: groove; margin-right: 100px; margin-left: 100px; font-size: x-large;">Based on the data above, we can unanimously conclude that Asia has better defenses compared to the other continents. This could be due to more countries being present in Asia that contribute to the numbers, or it could be due to Asian countries general willingness and ability to pour out more funds on their military. The least defended continent would be Oceania based on the data above. However, it is worth noting that Oceania consists of small islands and is surrounded by ocean, which can make it difficult to reach.</p>
+
+            <table style="border: solid;">
+                <tr>
+                    <td>
+                    <div class="pure-g">
+                        <div class="pure-u-1-1">
+                            <div id="vis6" class="vis-container"></div>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <p style="border-style: groove; margin-right: 100px; margin-left: 100px; font-size: x-large;">Artillery in this case consists of long range weapons that have the ability to give large amounts of damage. This includes rocket projectors, missile launchers, etc. As we can see from the visualisation above, Asian countries have the most number of artilleries in total, which may be due to massive military powers being centralized in Asia, or because Asia has a large number of countries in general compared to other continents. The least number of artilleries belongs to countries in Oceania.</p>
+                    </td>
+                </tr>
+                </table>
+        </div>
+
+        <h2>Visualisation by Jason A. Yusuf | Data Source: https://www.kaggle.com/datasets/prasertk/military-power-by-country-2022</h2>
+
+
+    <script type="text/javascript">
+        var specVis1 = "militarymap.json";
+        vegaEmbed('#vis1', specVis1);
+
+        var specVis2 = "budgetgraph.json";
+        vegaEmbed('#vis2', specVis2);
+
+        var specVis3 = "airdefense.json";
+        vegaEmbed('#vis3', specVis3);
+
+        var specVis4 = "seadefense.json";
+        vegaEmbed('#vis4', specVis4);
+
+        var specVis5 = "landdefense.json";
+        vegaEmbed('#vis5', specVis5);
+
+        var specVis6 = "arsenal.json";
+        vegaEmbed('#vis6', specVis6);
+
+        print(brush)
+    </script>
+</body>
+</html>
